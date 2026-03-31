@@ -5,12 +5,15 @@ public class Player implements Damageable {
   private String name;
   private int level;
   private int health;
+  public Position pos;
   final public static int maxHealth = 100;
+  
 
-  public Player(String name) {
+  public Player(String name, Position p) {
     this.name = name;
     level = 1;
     health = 100;
+    pos = p;
   }
 
   @Override
@@ -36,6 +39,10 @@ public class Player implements Damageable {
     p.health = maxHealth;
   }
 
+  public Position getPos(Position p) {
+    return p;
+  }
+
   @Override
   public String toString() {
     return "Player: (name: " + name + 
@@ -59,6 +66,9 @@ public class Player implements Damageable {
 
     pl1.takeDamage(10);
 
+    // How do you set pl1 to a new Position?
+    // How do you read it?
+    
   }
 
 }
