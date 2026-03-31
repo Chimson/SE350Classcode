@@ -51,13 +51,17 @@ public class Player implements Damageable {
 
   public static void main(String[] args) {
     System.out.println("Max possible health: " + Player.maxHealth);
-    Player pl1 = new Player("Ben");
+    Position p0 = new Position();
+    p0.set(0, 0);
+    
+    
+    Player pl1 = new Player("Ben", p0);
     pl1.takeDamage(0.50);
     System.out.println(pl1);
     pl1.levelUp();
     System.out.println(pl1);
     
-    Player pl2 = new Player("Willie");
+    Player pl2 = new Player("Willie", p0);
     pl2.levelUp();
     System.out.println(pl2);
 
