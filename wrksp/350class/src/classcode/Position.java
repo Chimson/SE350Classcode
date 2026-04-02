@@ -1,4 +1,3 @@
-// helps show mutability vs mutability
 package classcode;
 
 public class Position {
