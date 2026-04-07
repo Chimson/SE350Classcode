@@ -73,6 +73,9 @@ public class Player implements Damageable {
     // How do you set pl1 to a new Position?
     // How do you read it?
     
+    Damageable dmg = pl1;
+    dmg.takeDamage(100);
+    
   }
 
 }

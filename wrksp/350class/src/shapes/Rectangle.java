@@ -26,4 +26,12 @@ public class Rectangle extends Shape {
   public String toString() {
     return "Shape: (" + x + ", " + y + ", " + color + ", " + width + ", " + height + ")";
   }
+  
+  public static void main(String[] args) {
+    
+    Rectangle r = new Rectangle(0, 0, "blue", 4, 5);
+    Shape sh = (Shape) r ;
+    sh.isBiggerThan(sh);
+  
+  }
 }
