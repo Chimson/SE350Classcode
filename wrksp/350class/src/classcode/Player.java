@@ -7,6 +7,7 @@ public class Player implements Damageable {
   private int health;
   public Position pos;
   final public static int maxHealth = 100;
+  HealthService healthService = new HealthService();
   
 
   public Player(String name, Position p) {
@@ -41,6 +42,10 @@ public class Player implements Damageable {
 
   public Position getPos(Position p) {
     return p;
+  }
+  
+  public void usePotion() {
+    health = healthService.heal(health, 20);
   }
 
   @Override
