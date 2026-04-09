@@ -21,6 +21,7 @@ public class Position {
   }
 
   @Override
+  // test equals across execution paths
   public boolean equals(Object other) {
     if (other == null) {
       return false;

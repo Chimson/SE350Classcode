@@ -26,7 +26,7 @@ public class DemoShape {
     System.out.println("r is square? " + r.isSquare());
     System.out.println("c circumference: " + c.circumference());
   
-    // can cast (implicit here) subclass ref to superclass ref
+    // can coerce subclass ref to superclass ref
     // same for Shape parameters, aliases, etc.
     Shape[] shapes = {r, c};
     for (Shape s: shapes) {
@@ -34,6 +34,9 @@ public class DemoShape {
       // s.isSquare();       // can only call Shape defined methods
     }
     
+    // need to cast from declared type (Shape) back to actual type
+    Rectangle r2 = (Rectangle) shapes[0];
+    r2.isSquare();
   }
 
 }
