@@ -1,4 +1,4 @@
-package classcode;
+package oopintro;
 
 public class Player implements Damageable {
 
@@ -6,6 +6,8 @@ public class Player implements Damageable {
   private int level;
   private int health;
   public Position pos;
+  
+  // Client Vs Service
   final public static int maxHealth = 100;
   HealthService healthService = new HealthService();
   
@@ -40,9 +42,10 @@ public class Player implements Damageable {
     p.health = maxHealth;
   }
 
-  public Position getPos(Position p) {
-    return p;
-  }
+  // don't really need a get method if already public
+//  public Position getPos(Position p) {
+//    return p;
+//  }
   
   public void usePotion() {
     health = healthService.heal(health, 20);

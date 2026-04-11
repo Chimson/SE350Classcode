@@ -1,4 +1,4 @@
-package classcode;
+package oopintro;
 
 public class HealthService {
   public int heal(int health, int amount) {

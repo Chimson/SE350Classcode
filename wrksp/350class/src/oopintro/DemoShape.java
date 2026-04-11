@@ -1,4 +1,4 @@
-package classcode;
+package oopintro;
 
 // do not need to import other shapes classes
 import shapes.*;
