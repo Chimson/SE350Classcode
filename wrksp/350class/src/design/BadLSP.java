@@ -40,7 +40,7 @@ public class BadLSP {
   public static void main(String[] args) {
 
     // base class object is not compatible with Subclass
-    Rectangle r = (Rectangle) new Square();
+    Rectangle r = new Square();
     r.setWidth(2);
     r.setHeight(3);
     System.out.println("area returns " + r.area() + " but should be 6");
