@@ -1,5 +1,5 @@
 package oopintro;
 
-public interface Damageable {
+public interface IDamageable {
   void takeDamage(int amount);
 }

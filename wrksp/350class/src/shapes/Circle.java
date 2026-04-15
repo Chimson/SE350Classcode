@@ -17,4 +17,8 @@ public class Circle extends Shape {
   public double circumference() {
     return 2 * Math.PI * radius;
   }
+  
+  public String toString() {
+    return "Circle: (" + x + ", " + y + ", " + color + ", " + radius +  ")";
+  }
 }

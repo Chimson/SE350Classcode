@@ -13,6 +13,17 @@ public class Rectangle extends Shape {
     this.height = height;
   }
   
+  
+  // good for pure data classes, but breaks encapsulatiun
+  public double getX() {
+    return this.x;
+  }
+  
+  public void setX(double x) {
+    this.x = x;
+  }
+  
+  
   @Override
   public double area() {
     return width * height;
@@ -24,7 +35,7 @@ public class Rectangle extends Shape {
   }
   
   public String toString() {
-    return "Shape: (" + x + ", " + y + ", " + color + ", " + width + ", " + height + ")";
+    return "Rectangle: (" + x + ", " + y + ", " + color + ", " + width + ", " + height + ")";
   }
   
   public static void main(String[] args) {
