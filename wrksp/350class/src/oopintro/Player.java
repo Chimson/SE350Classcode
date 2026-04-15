@@ -59,8 +59,7 @@ public class Player implements IDamageable {
 
   public static void main(String[] args) {
     System.out.println("Max possible health: " + Player.maxHealth);
-    Position p0 = new Position();
-    p0.set(0, 0);
+    Position p0 = new Position(0, 0);
     
     
     Player pl1 = new Player("Ben", p0);
@@ -81,8 +80,8 @@ public class Player implements IDamageable {
     // How do you set pl1 to a new Position?
     // How do you read it?
     
-    IDamageable dmg = pl1;
-    dmg.takeDamage(100);
+    IDamageable d = pl1;
+    d.takeDamage(10);
     
   }
 

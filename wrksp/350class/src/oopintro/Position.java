@@ -1,18 +1,33 @@
 package oopintro;
 
+// mutatable with set method
+class MutPos {
+  private int x;
+  private int y;
+  public void set(int x, int y) {
+    this.x = x;
+    this.y = y;
+  }
+  public String toString() {
+    return "(" + x + ", " + y + ")";
+  }
+}
+
+
+// TODO: make immutable, enforce with final
+// methods that would normally mutate an object now create a new object
 public class Position {
   
-  static class UnsafePos {
-    public int x;
-    public int y;
+  private final int x;   
+  private final int y;
+
+  public Position(int x, int y) {
+    this.x = x;
+    this.y = y;
   }
-  
-  private int x;   
-  private int y;
-  
-  public void set(int valx, int valy) {
-    x = valx;
-    y = valy;
+
+  public Position move(int delx, int dely) {
+    return new Position(x + delx, y + dely);
   }
 
   @Override
@@ -39,21 +54,20 @@ public class Position {
   }
   
   public static void main(String[] args) {
-    Position p1 = new Position();
-    p1.set(0, 0);
-    UnsafePos p2 = new UnsafePos();
-    p2.x = 0;   
-    p2.y = 0;
+    Position p1 = new Position(1, 2);
+    MutPos p2 = new MutPos();
+    p2.set(0, 0);
     System.out.println("p1: " + p1);
-    System.out.println("p2: (" + p2.x + ", " + p2.y + ")");
+    System.out.println("p2: " + p2);
 
-    Position p3 = new Position();
-    p3.set(0, 1);
-    Position p4 = new Position();
-    p4.set(0, 0);
-    System.out.println(p3.equals(p3));  // true
-    System.out.println(p1.equals(p4));  // true bc same coords
-    System.out.println(p3.equals(p4));  // false bc diff coords
+    // mutating the same obj with MutPos
+    MutPos p3 = p2;
+    p2.set(1, 2);
+    System.out.println(p2 == p3); // true
+
+    // new object with Immutable
+    Position p0 = p1.move(-1, -1);
+    System.out.println(p0 == p1); // false  
   }
 }
 

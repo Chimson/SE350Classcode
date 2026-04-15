@@ -16,12 +16,9 @@ public class PositionTests {
  
  @BeforeEach
  void initEqualAndNotEqual() {
-   p0 = new Position();
-   p0.set(0, 0);
-   p1 = new Position();
-   p1.set(1, 0);   
-   p2 = new Position();
-   p2.set(0, 0);
+   p0 = new Position(0, 0);
+   p1 = new Position(1, 0);
+   p2 = new Position(0, 0);
  } 
  
  @Test
