@@ -1,7 +1,7 @@
 package design;
 
 // Fish class inherits behavior it doesn't need
-// EntityMoves operations need split up
+// Entity operations need split up
 
 public class BadISP {
    
@@ -14,24 +14,18 @@ public class BadISP {
     public void setY(int y) {
       this.y = y;
     }
-  }
+
+    public void walkUp(int delY) { 
+      setY(this.y + delY); 
+    }
+    public void swim(int delX, int delY) {
+      setX(this.x + delX);
+      setY(this.y + delY);
+    }
+  } 
   
-  class EntityMoves {
-    
-    public static void walkUp(Entity e, int y) {
-      e.setY(y);
-    }
-    public static void swim(Entity e, int x, int y) {
-      e.setX(x);
-      e.setY(y);
-    }
-  }
-  
-  class Fish extends EntityMoves {
-    private Entity e;
-    public Fish(Entity e) {
-      this.e = e;
-    }
+  class Fish extends Entity {
+    // inherit everything
   }
   
 }

@@ -1,7 +1,7 @@
 package design;
 
 // ISP: Interface Segregation Principle
-// Walk and Swim operations are no longer tied together in EntityMoves
+// Walk and Swim operations are no longer tied together in Entity
 // Done here by Java Interface but could also use classes for Walkable and Swimmable
 
 class GoodISP {
@@ -19,7 +19,7 @@ class GoodISP {
     }
   }
 
-  interface Walkable {
+  interface WalkUp {
     void walkUp(int amount);
   }
 

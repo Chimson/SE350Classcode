@@ -18,10 +18,10 @@ public class DIP {
   }
   
   
-  class NonNegAmount implements IAmount {
+  static class NonNegAmount implements IAmount {
     private int val;
     public NonNegAmount(int val) {
-      val = Math.abs(val);
+      this.val = Math.abs(val);
     }
     public void modify(int nval) {
       this.val += Math.abs(nval);
@@ -31,7 +31,7 @@ public class DIP {
     }
   }
   
-  class Health implements IHealth {
+  static class Health implements IHealth {
     private IAmount amnt;
     public Health(IAmount val) {
       amnt = val;
@@ -41,12 +41,13 @@ public class DIP {
     }
   }
   
-  class Player {
+  static class Player {
     IHealth health;
     public Player(IHealth health) {
       this.health = health;
     }
+    // how do you add a heal method?
   }
- 
+
 
 }

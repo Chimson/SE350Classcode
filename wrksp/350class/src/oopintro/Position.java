@@ -1,6 +1,6 @@
 package oopintro;
 
-// mutatable with set method
+// mutable with set method
 class MutPos {
   private int x;
   private int y;
