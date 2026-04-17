@@ -25,6 +25,12 @@ public class OCP {
       return current + (current * amount / 100);
     }
   }
+
+  class DamageModifier implements IHealthModifier {
+    public int apply(int current, int amount) {
+      return current -= amount;
+    }
+  }
   
   class Health {
     private int val = 100;
@@ -46,6 +52,9 @@ public class OCP {
     }
     
     // can add a similar takeDamage(int, IHealthModifier) method
+    public void takeDamage(int amount, IHealthModifier mod) {
+      health.modify(amount, mod);
+    }
 
     public int getHealth() {
       return health.get();
