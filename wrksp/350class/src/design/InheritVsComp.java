@@ -3,11 +3,14 @@ package design;
 
 public class InheritVsComp {
   
-  // example of poorly using inheritance that builds through subclass
+  // example of using inheritance that builds through subclass
   // composition below --- is much easier to maintain
   // What if you need Flyable enemy? 
   //   Is it Attackable? maybe not, maybe it only supports other enemies
-  // Adding more specific behavior explodes the number of direct subclasses
+  // Can force relationships into inheritance tree
+  //   May not be able to fully predict the tree design from the start
+  //   Redesign on a class cascades changes down the subtree 
+
   class Inherit {
     
     class Enemy {
@@ -37,9 +40,9 @@ public class InheritVsComp {
   // ---
   
   // this is better because you can add more specific enemies that mix and match behavior
-  // can add FlyableSupportEnemy without creating another subclass of Enemy
-  // can easily add FlyableAttackableEnemy building on Attackable Enemy
-  //   not forced into the inheritance tree somewhere
+  // can add FlyableSupportEnemy without fitting it into the inheritance tree
+  // Delegation is employed: AttackableEnemy delgates attack to IAttackPlayer implementing classes
+
   class Composition {
   
     class Enemy {
@@ -52,6 +55,7 @@ public class InheritVsComp {
     // simple for illustrative purposes
     class Player {
       public int health;
+
     }
 
     interface IAttackPlayer {
@@ -76,7 +80,7 @@ public class InheritVsComp {
         this.attackComp = new EnemyAttackComponent(atkval);
       }
       public void attack(Player player) {
-        attackComp.attack(player);
+        attackComp.attack(player);  // delegates attack to IAttackPlayer       
       }
     }
 
