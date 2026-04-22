@@ -54,8 +54,10 @@ public class InheritVsComp {
 
     // simple for illustrative purposes
     class Player {
-      public int health;
-
+      private int health;
+      public void hurt(int amt) {
+        health -= amt;
+      }
     }
 
     interface IAttackPlayer {
@@ -68,7 +70,7 @@ public class InheritVsComp {
         this.attack = attack;
       }
       public void attack(Player player) {
-        player.health -= attack;  
+        player.hurt(attack); 
       }
     }
 
