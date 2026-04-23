@@ -4,6 +4,11 @@ package design;
 // Walk and Swim operations are no longer tied together in Entity
 // Done here by Java Interface but could also use classes for Walkable and Swimmable
 
+// This works well on ISP, but how to refactor for the other SOLID Principles?
+// Make entity an EntityPosition class (SRP), Entity an abstract class or composed of EntityPosition
+//   Make Fish dependent on abstract class (DIP), possibly override setX setY
+// Implement a Person class with WalkUp a Walkable interface to show more ISP
+
 class GoodISP {
 
   class Entity {
