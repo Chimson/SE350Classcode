@@ -1,6 +1,8 @@
 package design;
 import java.util.Arrays;
 
+// should split all of these classes into thier own files
+
 public class BuilderPattern {
 
   class LevelBuilderDirector {

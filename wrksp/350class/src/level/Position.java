@@ -18,6 +18,7 @@ public class Position {
     return this.y;
   }
 
-  public static void main(String main) {
+  public static void main(String[] main) {
+    System.out.println("hi");
   }
 }
