@@ -32,6 +32,7 @@ public class DemoShape {
     for (Shape s: shapes) {
       System.out.println(s);
       // s.isSquare();       // can only call Shape defined methods
+      System.out.println("area:" + s.area());
     }
     
     // need to cast from declared type (Shape) back to actual type
