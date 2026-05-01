@@ -6,12 +6,12 @@ public class Demo {
 
     // concrete factories only need to appear once
     //   on instantiation
-    SnowMapTileFactory snowFact = new SnowMapTileFactory();
+    IMapTileFactory snowFact = new SnowMapTileFactory();
     ITree t1 = snowFact.createTree();
     IGrass g1 = snowFact.createGrass();
   
 
-    DefaultMapTileFactory defFact = new DefaultMapTileFactory();
+    IMapTileFactory defFact = new DefaultMapTileFactory();
     ITree t2 = defFact.createTree();
     IGrass g2 = defFact.createGrass();
 
