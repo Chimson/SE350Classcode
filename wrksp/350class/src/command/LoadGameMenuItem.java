@@ -2,9 +2,9 @@ package command;
 
 // invoker
 // asks command to carry out the request 
-public class GameLoader {
+public class LoadGameMenuItem {
   
-  public GameLoader(ICommand load) {
+  public LoadGameMenuItem(ICommand load) {
     load.execute();
   }
   

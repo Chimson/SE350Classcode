@@ -5,10 +5,10 @@ package command;
 public class MainMenu {
   
   public static void main(String[] args) {
+    // display menu option, handle selection
     ICommand loadGame1 = new LoadGameCommand(new Game("Game 1"));
-    new GameLoader(loadGame1);
+    new LoadGameMenuItem(loadGame1);
     
-
   } 
 
 }
