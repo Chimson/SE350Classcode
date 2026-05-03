@@ -1,7 +1,8 @@
 package strategy;
 import java.util.Arrays;
 
-public class Demo {
+// plays the role of client and context
+public class Demo<T> {
 
   public void insertionSort(int[] arr) {
     // fill in with the algorithm
@@ -34,7 +35,7 @@ public class Demo {
     int[] arr = new int[] {4, 3, 2, 1};
     intArraySort(arr, sortStrategy); 
     System.out.println(Arrays.toString(arr));
-  
+    
   }
   
 }
