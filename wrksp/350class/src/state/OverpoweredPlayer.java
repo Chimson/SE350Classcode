@@ -1,10 +1,9 @@
 package state;
 
-public class OverpoweredPlayer implements IPlayerState {
+public class OverpoweredPlayer implements IPlayerAttackState {
   
-  public void handle(Player p) {
-    p.setHealth(150);
-    p.setAttack(20);
+  public void handle(Enemy e) {
+    e.hurt(50);
   }
 
 }

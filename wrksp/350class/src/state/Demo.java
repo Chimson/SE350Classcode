@@ -3,11 +3,11 @@ package state;
 public class Demo {
   public static void main(String[] args) {
     Player p = new Player();
-    p.changeState(new DefaultPlayer());
-    p.update();
-    System.out.println(p);
+    Enemy e1 = new Enemy();
+    p.attack(e1);
+    System.out.println(e1);
     p.changeState(new OverpoweredPlayer());
-    p.update();
-    System.out.println(p);
+    p.attack(e1);
+    System.out.println(e1);
   }
 }
