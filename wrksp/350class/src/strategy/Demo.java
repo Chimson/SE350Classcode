@@ -2,14 +2,14 @@ package strategy;
 import java.util.Arrays;
 
 // plays the role of client and context
-public class Demo<T> {
+public class Demo {
 
   public void insertionSort(int[] arr) {
     // fill in with the algorithm
   }
 
   // may want different implementations of an algorithm or behavior
-  // instead of choosing a sort each time, use the Strategy classes
+  // instead of choosing a sort each time, like below, use the Strategy classes
   // Strategy class can eliminate this kind of switch based on type
   public void chooseSort(String sortname, int[] arr) {
     switch(sortname) {
