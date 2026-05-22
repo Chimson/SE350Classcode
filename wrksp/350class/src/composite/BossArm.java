@@ -1,5 +1,6 @@
 package composite;
 
+// Leaf
 public class BossArm implements IBossComponent {
   private int hp = 20;
 
