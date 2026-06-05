@@ -9,6 +9,7 @@ public class TreeType implements ITreeType {
     this.symbol = symbol;
   }
 
+  @Override
   public Character render(int x, int y) {
     return symbol;
   }

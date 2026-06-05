@@ -27,6 +27,7 @@ public class Demo {
   }
 
   // can flip out with JavaSortStrategy
+  // dynamic dispatch
   private static ISortStrategy sortStrategy = new InsertionSortStrategy();
 
   public static void main(String[] args) {
