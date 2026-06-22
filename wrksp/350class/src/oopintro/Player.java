@@ -83,6 +83,14 @@ public class Player implements IDamageable {
     IDamageable d = pl1;
     d.takeDamage(10);
     
+    // can use == with String to compare values
+    // any other Object type == would compare the references
+    String s1 = "Ben";
+    String s2 = "Ben";
+    System.out.println(s1.equals(s2));
+
+    
+
   }
 
 }
