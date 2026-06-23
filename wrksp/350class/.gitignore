@@ -9,3 +9,4 @@ run.zsh
 Dockerfile
 mvn-notes.txt
 session.vim
+/.mvn/
