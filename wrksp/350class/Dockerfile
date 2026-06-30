@@ -6,6 +6,7 @@ CMD ["bash"]
 # % docker build -t se350 .   # t give the image a name
 
 # Create the container with the build image, only run once
+#   may be able to add -w option to open inside a mounted folder
 # % docker run -it \      # i open stdin, t enable terminal
 #   --name se350-dev \    # name created container from image   
 #   -v ~/Repos/SE350Classcode:/app/SE350Classcode \    # mount local dir to : location in container
