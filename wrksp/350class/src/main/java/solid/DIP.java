@@ -1,4 +1,4 @@
-package design;
+package solid;
 
 // High and low level modules depend on abstactions (to a point)
 // interfaces do not depend on concrete classes (to a point)

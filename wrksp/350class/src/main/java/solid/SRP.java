@@ -1,4 +1,4 @@
-package design;
+package solid;
 
 // should seperate all of the classes to their own file
 // kept them together for demonstration only

@@ -1,4 +1,4 @@
-package design;
+package solid;
 import java.util.Arrays;
 
 // should split all of these classes into thier own files

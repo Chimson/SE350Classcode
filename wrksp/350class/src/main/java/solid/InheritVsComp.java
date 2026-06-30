@@ -1,4 +1,4 @@
-package design;
+package solid;
 
 
 public class InheritVsComp {

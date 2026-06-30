@@ -1,4 +1,4 @@
-package design;
+package solid;
 
 // Liskov Substitution Principle
 // Should always be able to substitute a superclass obj with a subclass obj

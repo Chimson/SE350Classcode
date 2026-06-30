@@ -1,4 +1,4 @@
-package design;
+package solid;
 
 // should split the interfaces and classes up to their own files
 

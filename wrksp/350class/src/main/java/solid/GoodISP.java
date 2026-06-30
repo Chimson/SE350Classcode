@@ -1,4 +1,4 @@
-package design;
+package solid;
 
 // ISP: Interface Segregation Principle
 // Walk and Swim operations are no longer tied together in Entity
