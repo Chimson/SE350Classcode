@@ -1,0 +1,38 @@
+# Simple Java dev image with mvn
+# need to add JUnit dependency through pom
+FROM maven:3.9.6-eclipse-temurin-21
+WORKDIR /app
+CMD ["bash"]
+
+# Start podman VM
+# need this at exactly once to run containers or image creation 
+# % podman machine start
+# % podman machine stop    # to stop 
+
+# Build the image with the Containerfile in the current folder
+# (run once)
+# % podman build -t se350 .
+
+# Create the container with the build image, only run once
+# Mounts location on my computer to contain envr
+# Sets the working containers terminal working dir
+# % podman run -it \
+#     --name se350-dev \
+#     --volume ~/Repos/SE350Classcode:/app/SE350Classcode \
+#     --workdir /app/SE350Classcode \
+#     se350
+
+# Quit from inside the container:
+# % exit
+
+# Reopen the container                       
+# % podman start --attach se350-dev
+
+# List containers and images
+# % podman ps -a
+# % podman images
+
+# Delete a container and image
+# % podman rm se350-dev
+# % podman rmi se350
+
