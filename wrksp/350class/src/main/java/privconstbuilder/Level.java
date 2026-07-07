@@ -1,4 +1,4 @@
-package level;
+package privconstbuilder;
 import java.util.Arrays;
 
 // hides the constructor in Level;
@@ -31,10 +31,6 @@ public class Level {
   public String toString() {
     return "title: " + title + "\n" + 
       "map: " + Arrays.deepToString(map) + "\n";
-  }
-
-  public static void main(String[] args) {
-
   }
 
 

@@ -1,8 +1,6 @@
-package level;
+package builder;
 
-public class Position {
-  
-
+class Position {
   private final int x;
   private final int y;
   
@@ -16,9 +14,5 @@ public class Position {
   
   public int getY() {
     return this.y;
-  }
-
-  public static void main(String[] main) {
-    System.out.println("hi");
   }
 }

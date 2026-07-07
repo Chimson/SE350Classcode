@@ -1,4 +1,4 @@
-package level;
+package privconstbuilder;
 
 public class DefaultLevelBuilder extends ILevelBuilder {
   

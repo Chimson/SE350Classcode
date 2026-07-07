@@ -1,4 +1,4 @@
-package level;
+package privconstbuilder;
 
 abstract class ILevelBuilder {
     
