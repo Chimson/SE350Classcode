@@ -24,7 +24,7 @@ public class Rectangle extends Shape {
   }
   
   
-  @Override
+  
   public double area() {
     return width * height;
   }
@@ -34,6 +34,7 @@ public class Rectangle extends Shape {
     return width == height;
   }
   
+  @Override
   public String toString() {
     return "Rectangle: (" + x + ", " + y + ", " + color + ", " + width + ", " + height + ")";
   }
@@ -41,8 +42,11 @@ public class Rectangle extends Shape {
   public static void main(String[] args) {
     
     Rectangle r = new Rectangle(0, 0, "blue", 4, 5);
-    Shape sh = (Shape) r ;
+    Shape sh = r ;
     sh.isBiggerThan(sh);
-  
+    System.out.println(sh);
+
+    Rectangle r1 = (Rectangle) sh;
+    
   }
 }

@@ -5,4 +5,5 @@ interface ILevelBuilder {
   void buildTitle();
   void buildEntrance(Position p);
   Level getLevel();
+
 }   

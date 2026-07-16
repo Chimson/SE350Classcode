@@ -7,6 +7,10 @@ public class LevelBuilderDirector {
     this.builder = builder;
   }
   
+  public void setBuilder(ILevelBuilder builder) {
+    this.builder = builder;
+  }
+
   public Level constuct() {
     builder.buildInitialGrid(25, 25);
     builder.buildTitle();
